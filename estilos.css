@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 3rem;;
+    margin-top: 3%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div.tarefas {
+    display: grid;
+    margin-top: 25px;
+    border: 3px solid blue;
+    padding: 25px;
+    grid-template-areas: "input  input   input  input  button";
+}
+
+div.tarefas input {
+    grid-area: input;
+    padding: 30px
+    
+}
+
+div.tarefas button {
+    grid-area: button;
+    background-color: rgb(3, 180, 3);
+    color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+}
+
+
+div.tarefas button:hover {
+    background-color:rgb(2, 134, 2)
+}
+
+
+div.conteudo {
+    border: 3px solid red;
+    background-color: white;
+    padding: 25px;
+    margin: 20px;
+}
