@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 * {
-   
+
     box-sizing: border-box;
 }
 
@@ -12,51 +12,49 @@ body {
 }
 
 header {
+    display: flex;
+    flex-flow: row wrap;
     text-align: center;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    width: 90%;
+    width: 70%;
     margin: auto auto;
-    border: 3px solid blue;
 }
 
 main {
-    display: flex;
-    flex-flow: row wrap;
-    width: 90%;
+    width: 60%;
     margin: auto auto;
-    padding-top: 40px;
-    
+    margin-top: 40px;
 }
 
 h1 {
     text-align: center;
-    font-size: 3rem;;
+    font-size: 3rem;
     margin-top: 3%;
     margin-bottom: 3%;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
 
 
 
-div.tarefas {
-   display: flex;
-   width: 100%;
-   justify-content: center;
-   align-items: center;
-  
+div.adicionarTarefas {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
-div.tarefas input {
-    width:80%;
+input {
+    width: 80%;
     height: 120px;
-    
+    padding-left: 10%;
+
 }
 
-div.tarefas button#btnAdd {
+div.adicionarTarefas button#btnAdd {
     width: 20%;
     height: 120px;
     background-color: rgb(3, 180, 3);
@@ -67,70 +65,366 @@ div.tarefas button#btnAdd {
 }
 
 
-div.tarefas button:hover {
-    background-color:rgb(2, 134, 2)
+div.adicionarTarefas button#btnAdd:hover {
+    background-color: rgb(2, 134, 2)
 }
 
 
 .item {
-    display: grid;
-    
+    display: flex;
+    flex-flow: row wrap;
     justify-content: center;
-    gap: 3rem;
-    height: 80px;
-    width: 100%;
-    background-color: white;
-    padding: 25px;
-    margin: 20px;
-    border: 3px solid red;
     align-items: center;
-    cursor: pointer;
+    height: 111px;
+    background-color: white;
     box-shadow: 0 0 20px green;
-    grid-template-areas: "icone  nome   nome   nome   botao"
+    border-radius: 5px;
+    margin-top: 40px;
 }
 
 
+.item.clicado {
+    background-color: rgb(137, 248, 137);
+    width: 100%;
+}
+
+.item.clicado .item-nome {
+    text-decoration: line-through;
+    color: gray;
+}
 
 .item-icone {
-    grid-area: icone;
-    /*flex: 20%;*/
-    font-size: 2rem;
+    flex: 20%;
     text-align: center;
+    font-size: 2rem;
+
 }
 
 .item-nome {
-    grid-area: nome;
-    /*flex: 55%;*/
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: bold;
-    color: green;
+    flex: 55%;
+    font-size: 1.3rem;
+    color: rgb(11, 100, 11);
+
 }
 
 
 .item-button {
-    grid-area: botao;
-    /*flex: 25%;*/
+    flex: 25%;
+
 }
 
+
 .delete {
+    width: 100%;
+    height: 111px;
     background: red;
     color: white;
     border: none;
-    padding: 10px;
-    height: 80px;
-    width: 100%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+.delete:hover {
+    background: rgb(186, 2, 2);
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        display: flex;
+        flex-flow: row wrap;
+        text-align: center;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        width: 90%;
+        margin: auto auto;
+    }
+
+    main {
+        width: 80%;
+        margin: auto auto;
+        margin-top: 40px;
+    }
+
+   
+
+    input {
+        width: 70%;
+        height: 120px;
+        padding-left: 10%;
+
+    }
+
+    div.adicionarTarefas button#btnAdd {
+        width: 30%;
+        height: 120px;
+        background-color: rgb(3, 180, 3);
+        color: white;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border: none;
+    }
+
+
+    
+
+
     
 }
 
 
-/*
-div.item button#delete{
-    width: 20%;
-    height: 100%;
-    background-color: red;
-    color: white;
-    width: 100%;
+@media screen and (min-width: 601px) and (max-width: 768px) {
+    header {
+        display: flex;
+        flex-flow: row wrap;
+        text-align: center;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        width: 70%;
+        margin: auto auto;
+    }
+   
+    main {
+        width: 60%;
+        margin: auto auto;
+        margin-top: 40px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 3rem;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+
+
+
+
+    div.adicionarTarefas {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input {
+        width: 80%;
+        height: 120px;
+        padding-left: 10%;
+
+    }
+
+    div.adicionarTarefas button#btnAdd {
+        width: 20%;
+        height: 120px;
+        background-color: rgb(3, 180, 3);
+        color: white;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border: none;
+    }
+
+
+    div.adicionarTarefas button#btnAdd:hover {
+        background-color: rgb(2, 134, 2)
+    }
+
+
+    .item {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        height: 111px;
+        background-color: white;
+        box-shadow: 0 0 20px green;
+        border-radius: 5px;
+        margin-top: 40px;
+    }
+
+
+    .item.clicado {
+        background-color: rgb(137, 248, 137);
+        width: 100%;
+    }
+
+    .item.clicado .item-nome {
+        text-decoration: line-through;
+        color: gray;
+    }
+
+    .item-icone {
+        flex: 20%;
+        text-align: center;
+        font-size: 2rem;
+
+    }
+
+    .item-nome {
+        flex: 55%;
+        font-size: 1.3rem;
+        color: rgb(11, 100, 11);
+
+    }
+
+
+    .item-button {
+        flex: 25%;
+
+    }
+
+
+    .delete {
+        width: 100%;
+        height: 111px;
+        background: red;
+        color: white;
+        border: none;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+    }
+
+    .delete:hover {
+        background: rgb(186, 2, 2);
+    }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
 
 }
-*/
+
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+}
+
+
+@media screen and (min-width: 1200px) {
+
+
+    header {
+        display: flex;
+        flex-flow: row wrap;
+        text-align: center;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        width: 70%;
+        margin: auto auto;
+    }
+
+    main {
+        width: 60%;
+        margin: auto auto;
+        margin-top: 40px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 3rem;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+
+
+
+
+    div.adicionarTarefas {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input {
+        width: 80%;
+        height: 120px;
+        padding-left: 10%;
+
+    }
+
+    div.adicionarTarefas button#btnAdd {
+        width: 20%;
+        height: 120px;
+        background-color: rgb(3, 180, 3);
+        color: white;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border: none;
+    }
+
+
+    div.adicionarTarefas button#btnAdd:hover {
+        background-color: rgb(2, 134, 2)
+    }
+
+
+    .item {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        height: 111px;
+        background-color: white;
+        box-shadow: 0 0 20px green;
+        border-radius: 5px;
+        margin-top: 40px;
+    }
+
+
+    .item.clicado {
+        background-color: rgb(137, 248, 137);
+        width: 100%;
+    }
+
+    .item.clicado .item-nome {
+        text-decoration: line-through;
+        color: gray;
+    }
+
+    .item-icone {
+        flex: 20%;
+        text-align: center;
+        font-size: 2rem;
+
+    }
+
+    .item-nome {
+        flex: 55%;
+        font-size: 1.3rem;
+        color: rgb(11, 100, 11);
+
+    }
+
+
+    .item-button {
+        flex: 25%;
+
+    }
+
+
+    .delete {
+        width: 100%;
+        height: 111px;
+        background: red;
+        color: white;
+        border: none;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+    }
+
+    .delete:hover {
+        background: rgb(186, 2, 2);
+    }
+
+
+}
