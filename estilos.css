@@ -18,27 +18,43 @@ h1 {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-div.tarefas {
-    display: grid;
-    margin-top: 25px;
+header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 90%;
+    margin: auto auto;
     border: 3px solid blue;
-    padding: 25px;
-    grid-template-areas: "input  input   input  input  button";
+}
+
+div.tarefas {
+   display: flex;
+   width: 100%;
+   justify-content: center;
+   align-items: center;
 }
 
 div.tarefas input {
-    grid-area: input;
-    padding: 30px
+    width:80%;
+    height: 120px;
     
 }
 
-div.tarefas button {
-    grid-area: button;
+div.tarefas button#add {
+    width: 20%;
+    height: 120px;
     background-color: rgb(3, 180, 3);
     color: white;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     border: none;
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    margin: auto auto;
+    padding-top: 40px;
 }
 
 
@@ -48,7 +64,7 @@ div.tarefas button:hover {
 
 
 div.conteudo {
-    border: 3px solid red;
+    max-width: 75%;
     background-color: white;
     padding: 25px;
     margin: 20px;
