@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,21 +10,46 @@
     <link rel="shortcut icon" href="imagens/icone.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
 </head>
-<body>
-    <h1>Lista de Tarefas</h1>
-    <main>
-        
-        <header>
-            <div class="tarefas">
-                <input type="text" placeholder="Digite a tarefa">
-                <button id="add">Adicionar</button>
-            </div>
-        </header>
-        
 
-        <div class="conteudo">
-           <i class="mdi mdi-circle-outline"></i> Conteúdo de Teste
+<body>
+
+    <h1>Lista de Tarefas</h1>
+
+    <header>
+
+        <div class="tarefas">
+            <input type="text" placeholder="Digite a tarefa">
+            <button id="btnAdd">Adicionar</button>
+        </div>
+    </header>
+
+    <main id="areaLista">
+
+        <div class="item">
+            <div class="item-icone">
+                <i class="mdi mdi-circle-outline"></i>
+            </div>
+            <div class="item-nome">
+                Teste de Tarefa
+            </div>
+            <div class="item-button">
+                <button id="btnexcluir" class="delete">Excluir</button>
+            </div>
+
+
+            <div class="item-clicado">
+                <div class="item-icone">
+                    <i class="mdi mdi-circle-outline"></i>
+                </div>
+                <div class="item-nome">
+                    Teste de Tarefa
+                </div>
+                <div class="item-button">
+                    <button id="btnexcluir" class="delete">Excluir</button>
+                </div>
+            </div>
         </div>
     </main>
 </body>
+
 </html>
